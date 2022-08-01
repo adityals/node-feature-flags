@@ -4,6 +4,9 @@
   "description": "NodeJS Feature Flag Watcher",
   "main": "dist/index.js",
   "author": "Aditya Septiadi",
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "engines": {
     "node": ">=12"
