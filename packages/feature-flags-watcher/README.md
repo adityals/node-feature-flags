@@ -55,4 +55,4 @@ Available provider for watcher can be seen below:
 
 **Example:**
 
-For working example, you can see on the `example/consul-kv`
+For working example, you can see on the [consul-kv-example](../../examples/consul-kv/)
