@@ -12,6 +12,8 @@ Available provider for watcher can be seen below:
 ## Consul KV
 **Usage:**
 ```ts
+import { ConsulKVWatcher } from 'node-feature-flags-watcher'
+
  const featureFlags = new ConsulKVWatcher({
     consulBaseURL: 'http://localhost:8500',
     keyPrefix: 'service/my-service/v1/feature-flag',
