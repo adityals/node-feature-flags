@@ -1,0 +1,31 @@
+name: '[TEST] WIF'
+
+on:
+  push:
+    branches:
+      - adityas/test-wif
+
+concurrency:
+  group: test-wif-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+
+    steps:
+      - name: Google Auth
+        id: 'auth'
+        uses: 'google-github-actions/auth@v0.4.0'
+        with:
+          token_format: 'access_token'
+          workload_identity_provider: 'projects/304256750947/locations/global/workloadIdentityPools/gh-runner-example-pool/providers/github'
+          service_account: 'gh-runner@mystic-producer-233907.iam.gserviceaccount.com'
+
+
+
